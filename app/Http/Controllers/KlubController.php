@@ -25,7 +25,19 @@ class KlubController extends Controller
                 'nama_tim'=>$request['nama_tim'],
                 'created_at'=> now()->toDateTimeString()
             ];
-            DB::table('teams')->insert($data);
+            // DB::table('teams')->insert($data);
+            $dataKlasemen = [
+                'id_team'=>DB::table('teams')->insertGetId($data),
+                'match_play'=>0,
+                'win'=>0,
+                'draw'=>0,
+                'lose'=>0,
+                'goal_for'=>0,
+                'goal_against'=>0,
+                'goal_difference'=>0,
+                'point'=>0,
+            ];
+            DB::table('klasemen')->insert($dataKlasemen);
             return redirect('/input-klub')->with('success', 'Berhasil tambah klub!');
     }
 

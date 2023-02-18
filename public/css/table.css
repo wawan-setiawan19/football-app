@@ -11,3 +11,9 @@ table thead{
 table tbody{
     background-color: rgb(218, 219, 255);
 }
+
+@media screen and (max-width: 660px) {
+    .klasemen{
+        font-size: .75rem;
+    }
+}

@@ -22,3 +22,9 @@
         @endforeach
     </tbody>
 </table>
+
+<script>
+    $(document).ready( function () {
+        $('#myTable').DataTable({});
+    } );
+</script>
