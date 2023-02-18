@@ -1,0 +1,13 @@
+table{
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+table thead{
+    background-color: rgb(0, 2, 129);
+    color: white;
+}
+
+table tbody{
+    background-color: rgb(218, 219, 255);
+}
